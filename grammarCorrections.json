@@ -1,0 +1,52 @@
+{
+	"corrections": [
+		{
+			"correct": "he is",
+			"incorrect": ["he's", "hes"]
+		},
+		{
+			"correct": "she is",
+			"incorrect": ["she's", "shes"]
+		},	
+		{
+			"correct": "its",
+			"incorrect": ["it's", "it is"]
+		},	
+		{
+			"correct": "they are",
+			"incorrect": ["they're", "theyre"]
+		},
+		{
+			"correct": "you are",
+			"incorrect": ["you're", "youre"]
+		},
+		{
+			"correct": "he is",
+			"incorrect": ["he's", "hes"]
+		},
+		{
+			"correct": "what is",
+			"incorrect": ["what's", "whats"]
+		},
+		{
+			"correct": "that is",
+			"incorrect": ["that's", "thats"]
+		},
+		{
+			"correct": "i am",
+			"incorrect": ["i'm", "im", "imma"]
+		},
+		{
+			"correct": "going",
+			"incorrect": ["goin'", "goin"]
+		},
+		{
+			"correct": "going to",
+			"incorrect": ["gonna"]
+		},
+		{
+			"correct": "can not",
+			"incorrect": ["can't", "cant", "cannot"]
+		}
+	]
+}

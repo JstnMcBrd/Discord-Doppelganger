@@ -1,0 +1,14 @@
+{
+   "bot": {
+		"username": "",
+		"token": "",
+		"userID": "",
+		"addToServerURL": "https://discordapp.com/oauth2/authorize?&client_id= &scope=bot&permissions=0"
+   },
+   "original": {
+		"username": "",
+		"userID": "",
+		"avatarURL": ""
+   }
+   
+}

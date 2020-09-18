@@ -1,0 +1,74 @@
+{
+	"percentageName": "hyperness",
+	"incorrectCommandResponse": "That's an invalid command! You're dumb!",
+	
+	"catchphrases": [
+		"These are short, simple catchphrases that the bot will randomly use to respond to random messages.",
+		"Add catchphrases that the person you're trying to copy uses often, and it will sound a lot like them!",
+		"wow",
+		"not funny",
+		"Lol",
+		"That's pretty cool."
+	],
+	
+	"mentionResponses": [
+		"These are responses the doppelganger gives when it is mentioned. Customize these to sound like the person you're trying to copy. Examples below.",
+		"Hey, you mentioned me!",
+		"Don't mention me, that's annoying",
+		"Whaaaat"
+	],
+	
+	"customCommands": [
+		{
+			"commands": ["example command"],
+			"func": "example_command",
+			"description": "Users can give the bot a custom command. Usually this does something special that has to do with the person this bot is trying to copy. See the uniqueFunc.js file to define your custom function."
+		}
+	],
+	
+	"equivalentCommands": [
+		{
+			"commands": ["this allows the bot to respond to specialized commands that have the same meaning as some of the default commands", "more customization!"],
+			"convertTo": "see real examples below"
+		},
+		{
+			"commands": ["toohyper", "reducehyperness"],
+			"convertTo": "decreasepercentage"
+		},
+		{
+			"commands": ["nothyperenough", "morehyper", "increasehyper"],
+			"convertTo": "increasepercentage"
+		},
+		{
+			"commands": ["changehyper"],
+			"convertTo": "changepercentage"
+		},
+		{
+			"commands": ["sethyper", "hyper="],
+			"convertTo": "setpercentage"
+		},
+		{
+			"commands": ["reporthyper", "howhyper", "hyperlevel", "currenthyperness"],
+			"convertTo": "reportpercentage"
+		},
+		{
+			"commands": ["nohyper"],
+			"convertTo": "quietmode"
+		},
+		{
+			"commands": ["allhyper", "hyper100"],
+			"convertTo": "crazymode"
+		}
+	],
+	
+	"customResponses": [
+		{
+			"triggers": ["users can mention the bot and say things to it", "this section allows the bot to recognize certain phrases and give a custom response"],
+			"responses": ["see real example below"]
+		},
+		{
+			"triggers": ["how are you doing?", "how are you?"],
+			"responses": ["can't complain, not that it would do any good anyway"]
+		}			
+	]
+}

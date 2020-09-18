@@ -1,0 +1,13 @@
+{
+   "bot": {
+		"username": "BotUsername",
+		"token": "th1s-1s-n0t-a-val1d-t0ken",
+		"userID": "00000000000000000",
+		"addToServerURL": "https://discordapp.com/oauth2/authorize?&client_id=00000000000000000&scope=bot&permissions=0"
+   },
+   "original": {
+		"username": "RealPerson",
+		"userID": "111111111111111111",
+		"avatarURL": "https://media.discordapp.net/attachments/398641708319113226/756342166195798036/avatar.png?width=611&height=611"
+   }
+}
