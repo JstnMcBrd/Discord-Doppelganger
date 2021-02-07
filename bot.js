@@ -11,7 +11,11 @@
 //reactions to messages
 //special behavior
 
-var lastUpdated = new Date(2019, 1, 15, 19, 05);
+//NEW IDEA:
+//make countering/percentage info local to each channel
+//add a !menu command that prints the local information for the channel and provides emojis to change the options
+
+var lastUpdated = new Date(2021, 1, 7, 3, 16); //the month is 0-indexed
 
 //Colors first
 console.log("Initializing Colors");
@@ -139,18 +143,11 @@ var commandDescriptions = [
 client.on('ready', () => {
 	var options = process.argv.slice(3);
 	
-	if (options.includes("no_activity"))
-	{
-		client.user.setActivity("");
-	}
-	else
-	{
-		client.user.setActivity(info.original.username, {type: 'WATCHING'});
-	}
-	if (options.includes("invisible"))
-	{
-		client.user.setStatus('invisible');
-	}
+	if (options.includes("no_activity")) client.user.setActivity("");
+	else client.user.setActivity(info.original.username, {type: 'WATCHING'});
+	
+	if (options.includes("invisible")) client.user.setStatus('invisible');
+	
 	
 	//client.user.setAvatar(filePath + 'botavatar.png');
 	
@@ -331,6 +328,7 @@ var logMessage = function(message) {
 var mentioned = function(message) {
 	//remove mention
 	var noMention = message.content.replace("<@" + client.user.id + ">", "");
+	noMention = noMention.replace("<@!" + client.user.id + ">", "");
 	noMention = noMention.trim();
 	
 	console.log("\t\tMessage Without Mentions:".info);
@@ -1175,29 +1173,25 @@ var sendMessage = function(channel, content, options, simTyping) {
 }
 
 var removeMentions = function(message) {
-	//var str = message.cleanContent;
-	
 	var str = message.content;
-	
-	var users = message.mentions.users.array();
-	var roles = message.mentions.roles.array();
 	
 	str = str.replace("@everyone", "");
 	str = str.replace("@here", "");
 	
+	var users = message.mentions.users.array();
 	for (var i = 0; i < users.length; i++)
 	{
 		str = str.replace("<@" + users[i].id + ">", "");
+		str = str.replace("<@!" + users[i].id + ">", "");
 	}
 	
+	var roles = message.mentions.roles.array();
 	for (var i = 0; i < roles.length; i++)
 	{
 		str = str.replace("<@&" + roles[i].id + ">", "");
 	}
 	
-	str = str.trim();
-	
-	return str;
+	return str.trim();
 }
 
 var grammarStandardizer = function (str) {

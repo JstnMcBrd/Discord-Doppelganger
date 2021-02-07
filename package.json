@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "bot.js",
-  "author": "Justin M",
+  "author": "Justin McBride",
   "dependencies": {
     "colors": "^1.2.4",
     "discord.io": "^2.5.3",
-    "discord.js": "^11.3.2",
+    "discord.js": "^11.6.4",
     "git": "^0.1.5",
     "winston": "^2.4.0"
   }
